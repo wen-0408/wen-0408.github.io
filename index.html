@@ -9,3 +9,109 @@
       hello world
   </body>
 </html>
+<!DOCTYPE html>
+.card {
+background: white;
+border-radius: 12px;
+width: 280px;
+padding: 20px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.card h2 {
+margin-bottom: 15px;
+}
+.card button {
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+background-color: #4f46e5;
+color: white;
+cursor: pointer;
+font-size: 16px;
+}
+.card button:hover {
+background-color: #4338ca;
+}
+.card img {
+margin-top: 15px;
+width: 100%;
+border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+
+<h1>點擊選擇隨機圖片</h1>
+
+
+<div class="container">
+<!-- 第一部分：韓國經紀公司 -->
+<div class="card">
+<h2>韓國經紀公司</h2>
+<button onclick="randomCompany()">隨機選擇</button>
+<img id="companyImg" src="" alt="" />
+</div>
+
+
+<!-- 第二部分：打歌舞台髮型 -->
+<div class="card">
+<h2>打歌舞台髮型</h2>
+<button onclick="randomHair()">隨機選擇</button>
+<img id="hairImg" src="" alt="" />
+</div>
+
+
+<!-- 第三部分：打歌舞台服裝 -->
+<div class="card">
+<h2>打歌舞台服裝</h2>
+<button onclick="randomOutfit()">隨機選擇</button>
+<img id="outfitImg" src="" alt="" />
+</div>
+</div>
+
+
+<script>
+const companyImages = [
+"https://via.placeholder.com/300x200?text=SM+Entertainment",
+"https://via.placeholder.com/300x200?text=JYP+Entertainment",
+"https://via.placeholder.com/300x200?text=YG+Entertainment",
+"https://via.placeholder.com/300x200?text=HYBE"
+];
+
+
+const hairImages = [
+"https://via.placeholder.com/300x200?text=Stage+Hair+1",
+"https://via.placeholder.com/300x200?text=Stage+Hair+2",
+"https://via.placeholder.com/300x200?text=Stage+Hair+3"
+];
+
+
+const outfitImages = [
+"https://via.placeholder.com/300x200?text=Stage+Outfit+1",
+"https://via.placeholder.com/300x200?text=Stage+Outfit+2",
+"https://via.placeholder.com/300x200?text=Stage+Outfit+3"
+];
+
+
+function randomCompany() {
+const img = companyImages[Math.floor(Math.random() * companyImages.length)];
+document.getElementById("companyImg").src = img;
+}
+
+
+function randomHair() {
+const img = hairImages[Math.floor(Math.random() * hairImages.length)];
+document.getElementById("hairImg").src = img;
+}
+
+
+function randomOutfit() {
+const img = outfitImages[Math.floor(Math.random() * outfitImages.length)];
+document.getElementById("outfitImg").src = img;
+}
+</script>
+
+
+</body>
+</html>
